@@ -1,0 +1,60 @@
+{
+  "machines": [
+    {
+      "label": "Standard Washer (Top-Load)",
+      "price": "From $3.25"
+    },
+    {
+      "label": "Large Washer (Front-Load)",
+      "price": "From $4.50"
+    },
+    {
+      "label": "Extra-Large Washer",
+      "price": "From $6.50"
+    },
+    {
+      "label": "Standard Dryer (per cycle)",
+      "price": "From $0.25 / 8 min"
+    },
+    {
+      "label": "Commercial Dryer (large)",
+      "price": "From $0.50 / 8 min"
+    }
+  ],
+  "services": [
+    {
+      "label": "Wash & Fold",
+      "price": "$1.75 / lb (5 lb min)"
+    },
+    {
+      "label": "Drop-Off Service",
+      "price": "$1.75 / lb (5 lb min)"
+    },
+    {
+      "label": "Oversized Items",
+      "price": "From $8.00 / load"
+    },
+    {
+      "label": "Commercial Accounts",
+      "price": "Custom quote"
+    }
+  ],
+  "paymentMethods": [
+    {
+      "label": "Credit & Debit",
+      "icon": "credit-card"
+    },
+    {
+      "label": "Coins",
+      "icon": "coins"
+    },
+    {
+      "label": "Mobile Pay",
+      "icon": "smartphone"
+    },
+    {
+      "label": "Cash",
+      "icon": "banknote"
+    }
+  ]
+}

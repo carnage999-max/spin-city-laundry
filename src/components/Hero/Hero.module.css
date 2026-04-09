@@ -1,0 +1,253 @@
+.hero {
+  min-height: 100vh;
+  padding: 112px 5vw 48px;
+  background-color: var(--brand-navy);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='none' stroke='%231A6FE8' stroke-opacity='0.12' stroke-width='2'/%3E%3C/svg%3E");
+  color: var(--brand-white);
+  display: flex;
+  align-items: center;
+  scroll-margin-top: 108px;
+}
+
+.grid {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  gap: 32px;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+}
+
+.heroLogoWrapMobile {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.heroLogoWrapDesktop {
+  display: none;
+}
+
+.heroLogo {
+  width: 190px;
+  height: auto;
+  border: 3px solid var(--brand-black);
+  box-shadow: 5px 5px 0 var(--brand-black);
+  background: var(--brand-white);
+}
+
+.label {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 2px solid var(--brand-black);
+  background: var(--brand-yellow);
+  color: var(--brand-black);
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: rotate(-1deg);
+}
+
+.title {
+  margin-top: 22px;
+  font-size: clamp(4rem, 10vw, 9rem);
+  color: var(--brand-white);
+  animation: fadeSlideUp 0.5s ease-out;
+}
+
+.clean {
+  color: var(--brand-yellow);
+}
+
+.subtitle {
+  margin: 20px auto 0;
+  max-width: 520px;
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hoursNote {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 16px;
+  width: min(100%, 560px);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.hoursNoteIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--brand-yellow);
+}
+
+.hoursNote span {
+  min-width: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border: 3px solid var(--brand-black);
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 var(--brand-black);
+}
+
+.primaryButton {
+  background: var(--brand-yellow);
+  color: var(--brand-black);
+  box-shadow: 4px 4px 0 var(--brand-black);
+}
+
+.secondaryButton {
+  background: var(--brand-blue);
+  color: var(--brand-white);
+  box-shadow: 4px 4px 0 var(--brand-black);
+}
+
+.outlineButton {
+  background: transparent;
+  border-color: var(--brand-white);
+  color: var(--brand-white);
+  box-shadow: 4px 4px 0 var(--brand-white);
+}
+
+.outlineButton:hover,
+.outlineButton:focus-visible {
+  box-shadow: 1px 1px 0 var(--brand-white);
+}
+
+.trustLine {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.trustItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.trustIcon {
+  width: 14px;
+  height: 14px;
+  color: var(--brand-yellow);
+}
+
+.visualColumn {
+  display: none;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 640px) {
+  .hero {
+    padding-bottom: 64px;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.7fr);
+  }
+
+  .heroLogoWrapMobile {
+    display: none;
+  }
+
+  .content {
+    text-align: left;
+  }
+
+  .heroLogo {
+    width: 240px;
+  }
+
+  .subtitle {
+    margin-inline: 0;
+  }
+
+  .hoursNote {
+    margin-inline: 0;
+  }
+
+  .actions {
+    justify-content: flex-start;
+  }
+
+  .trustLine {
+    justify-content: flex-start;
+  }
+
+  .visualColumn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heroLogoWrapDesktop {
+    display: flex;
+    align-self: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding-top: 120px;
+  }
+
+  .heroLogo {
+    width: 280px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid {
+    gap: 64px;
+  }
+
+  .heroLogo {
+    width: 340px;
+  }
+}

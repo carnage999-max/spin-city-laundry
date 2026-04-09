@@ -1,0 +1,128 @@
+.section {
+  padding: 48px 5vw;
+  background: var(--brand-white);
+  scroll-margin-top: 108px;
+}
+
+.header {
+  max-width: 760px;
+}
+
+.label {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 2px solid var(--brand-black);
+  background: var(--brand-yellow);
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: rotate(-1deg);
+}
+
+.title {
+  margin-top: 18px;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
+.description {
+  margin-top: 16px;
+  max-width: 640px;
+  font-size: 1.05rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 28px;
+  background: var(--brand-white);
+  border: 3px solid var(--brand-black);
+  box-shadow: 5px 5px 0 var(--brand-black);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0 var(--brand-black);
+}
+
+.iconBox {
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand-blue);
+  color: var(--brand-white);
+  border: 2px solid var(--brand-black);
+}
+
+.iconBox svg {
+  width: 34px;
+  height: 34px;
+}
+
+.cardTitle {
+  margin-top: 16px;
+  font-size: 1.6rem;
+}
+
+.cardText {
+  margin-top: 12px;
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.pill {
+  padding: 4px 10px;
+  background: var(--brand-light-bg);
+  border: 2px solid var(--brand-black);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.cardLink {
+  margin-top: auto;
+  padding-top: 22px;
+  color: var(--brand-blue);
+  font-weight: 700;
+}
+
+.cardLink:hover,
+.cardLink:focus-visible {
+  text-decoration: underline;
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding-block: 80px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .card:nth-child(5) {
+    grid-column: 2;
+  }
+}

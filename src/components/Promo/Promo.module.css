@@ -1,0 +1,97 @@
+.section {
+  position: relative;
+  isolation: isolate;
+  contain: paint;
+  overflow: hidden;
+  padding: 60px 5vw;
+  background: var(--brand-yellow);
+  border-top: 4px solid var(--brand-black);
+  border-bottom: 4px solid var(--brand-black);
+  text-align: center;
+  scroll-margin-top: 108px;
+}
+
+.backgroundText {
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  z-index: 0;
+  white-space: nowrap;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(4rem, 12vw, 9rem);
+  color: rgba(0, 0, 0, 0.06);
+  pointer-events: none;
+  user-select: none;
+  transform: translateY(-50%) rotate(-4deg);
+  animation: marqueeSlide 30s linear infinite;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--brand-black);
+  color: var(--brand-white);
+  border: 2px solid var(--brand-black);
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  transform: rotate(-1deg);
+}
+
+.title {
+  margin-top: 18px;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  color: var(--brand-black);
+}
+
+.body {
+  margin-top: 16px;
+  font-size: 1.1rem;
+  color: var(--brand-black);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 26px;
+  padding: 14px 32px;
+  background: var(--brand-blue);
+  color: var(--brand-white);
+  border: 3px solid var(--brand-black);
+  box-shadow: 4px 4px 0 var(--brand-black);
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 var(--brand-black);
+}
+
+.note {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+@keyframes marqueeSlide {
+  from {
+    transform: translate(-2%, -50%) rotate(-4deg);
+  }
+
+  to {
+    transform: translate(-18%, -50%) rotate(-4deg);
+  }
+}

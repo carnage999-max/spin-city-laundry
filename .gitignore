@@ -39,3 +39,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+spin-city-laundry-agent-spec.md
+.sixth/
