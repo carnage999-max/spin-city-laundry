@@ -81,6 +81,7 @@ const faqSchema = {
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
+  manifest: "/manifest.webmanifest",
   applicationName: businessDetails.name,
   title: 'Spin City Laundry® | Wash · Dry · Done!',
   description:
@@ -136,6 +137,14 @@ export const metadata: Metadata = {
     images: [siteConfig.ogImagePath],
   },
   category: 'laundromat',
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: ["/favicon.ico"],
+  },
 };
 
 export default function RootLayout({
