@@ -99,6 +99,17 @@ export default function Footer() {
         <p className={styles.bottomRight}>
           Built with <Heart className={styles.heartIcon} aria-hidden="true" /> for clean clothes.
         </p>
+        <p className={styles.attribution}>
+          Part of the{" "}
+          <a
+            href="https://se7eninc.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Se7en
+          </a>{" "}
+          family of companies.
+        </p>
       </div>
     </footer>
   );

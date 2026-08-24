@@ -110,6 +110,19 @@
   text-align: left;
 }
 
+.attribution {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.attribution a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.attribution a:hover {
+  color: var(--brand-yellow);
+}
+
 .heartIcon {
   width: 14px;
   height: 14px;
