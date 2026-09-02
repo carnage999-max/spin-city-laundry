@@ -174,6 +174,11 @@ export default function RootLayout({
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
+        <Script
+          src="https://now-hiring-eta.vercel.app/widget.js"
+          data-icon="WashingMachine"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
